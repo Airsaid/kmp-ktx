@@ -35,5 +35,9 @@ Keep the library focused on low-dependency common Kotlin utilities; do not add U
 
 ## Commit & Pull Request Guidelines
 
-- Use Conventional Commits (`feat:`, `fix:`, `docs:`, etc.).
+- Use Conventional Commits (`feat:`, `fix:`, `docs:`, etc.) so Release Please can determine release versions.
+- `fix:` triggers a patch release, `feat:` triggers a minor release, and `!` or a `BREAKING CHANGE:` footer triggers a breaking release.
+- `docs:`, `test:`, `ci:`, and `chore:` do not trigger a release by default.
+- Use a `Release-As: x.y.z` footer when a PR must force a specific release version.
+- Keep each PR focused and ensure the squash merge title keeps the Conventional Commits prefix.
 - Keep each change focused and ensure CI-critical tasks pass locally before opening a PR.
